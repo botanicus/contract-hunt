@@ -62,3 +62,26 @@ __END__
 <p>
   <em>Don't forget to check out <a href="https://www.toptal.com/platform/developer/jobs">TopTal jobs</a>.</em>
 </p>
+
+<h3>Some more resources</h3>
+<ul>
+  <li>https://weworkremotely.com/</li>
+  <li>https://jobs.github.com/positions?description=ruby&location=</li>
+  <li>https://twitter.com/AngularHire</li>
+  <li>https://twitter.com/rorjobs</li>
+  <li>https://twitter.com/RailsJobsCom</li>
+  <li>http://job-empleo.com/index.php/cod.search/what.ruby/vertical.jobs/d.job-empleo.com/lang.en_UK/where.Greater%20London/job_type.contract</li>
+  <li>http://www.jobsite.co.uk/cgi-bin/advsearch?search_type=quick&engine=db&search_referer=internal&fp_skill_include=ruby&location_include=&location_within=20</li>
+  <li>http://searchskyjobs.com/england/osterley-jobs</li>
+  <li>https://nomadlist.com/</li>
+  <li>https://unicornhunt.io/</li>
+  <li>https://www.lytmus.io/</li>
+  <li>http://www.bbc.co.uk/careers/what-we-do/online</li>
+</ul>
+
+<h3>Some more ideas</h3>
+<ul>
+  <li>Review meetups.</li>
+  <li>Brainstorm other ways how to make money. Courses? Online courses? Moving towards start-up technical advising? HackHands?</li>
+  <li>What more twitter searches would be useful?</li>
+</ul>
