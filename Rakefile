@@ -17,7 +17,7 @@ namespace :docker do
 
   desc "SSH into a running container."
   task :ssh do
-    id = %x{docker ps | grep #{NAME}:latest | awk '{ print $1 }'}.chomp
+    id = %x{docker ps | grep #{NAME}:latest | head -1 | awk '{ print $1 }'}.chomp
     sh "docker exec -it #{id} /bin/sh"
   end
 end

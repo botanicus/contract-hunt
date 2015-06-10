@@ -12,4 +12,5 @@ VOLUME ["/data"]
 
 ADD . $ROOT
 
-CMD $ROOT/bin/scheduler.rb
+WORKDIR $ROOT
+CMD ["/usr/local/bin/bundle", "exec", "./bin/scheduler.rb"]
