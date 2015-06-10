@@ -10,7 +10,6 @@ def run
   system command
 end
 
-run
 n = Time.now.utc
 next_digest_time = Time.new(n.year, n.month, n.day + 1, 6, 20, 0, 0)
 
