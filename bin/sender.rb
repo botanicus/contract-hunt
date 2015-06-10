@@ -2,6 +2,9 @@
 
 require 'pony'
 
+# Don't crash when there are UTF-8 chars.
+Encoding.default_external = 'UTF-8'
+
 Pony.mail({
   to: 'contracts@101ideas.cz',
   subject: 'Contract digest',
