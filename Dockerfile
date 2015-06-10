@@ -4,14 +4,14 @@ ENV ROOT /apps/contract-hunt
 
 RUN apt-get update && apt-get install -y build-essential && rm -rf /var/lib/apt/lists/*
 
-RUN mkdir -p $ROOT $ROOT/vendor/cache
+RUN mkdir -p $ROOT
 WORKDIR $ROOT
 
 ADD Gemfile Gemfile.lock $ROOT/
-ADD vendor/cache $ROOT/vendor/cache
+ADD vendor $ROOT/vendor
 
 #RUN bundle install --without development --deployment
-RUN bundle install --deployment
+RUN bundle install --local
 
 VOLUME ["/data"]
 
