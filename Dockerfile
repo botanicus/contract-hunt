@@ -9,7 +9,7 @@ WORKDIR $ROOT
 
 ADD Gemfile Gemfile.lock vendor/cache $ROOT/
 #RUN bundle install --without development --deployment
-RUN bundle install --deployment
+RUN bundle install
 
 VOLUME ["/data"]
 
