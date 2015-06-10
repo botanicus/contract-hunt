@@ -28,8 +28,12 @@ def run(command)
 end
 
 n = Time.now.utc
-# next_digest_time = Time.new(n.year, n.month, n.day + 1, 6, 20, 0, '+00:00').utc
-next_digest_time = Time.new(n.year, n.month, n.day, n.hour, n.min, n.sec + 1, '+00:00').utc
+n.hour
+next_digest_time = Time.new(n.year, n.month, n.day, 6, 20, 0, '+00:00').utc
+next_digest_time += 24 * 60 * 60 if next_digest_time < n
+
+# Run immediately
+# next_digest_time = Time.new(n.year, n.month, n.day, n.hour, n.min, n.sec + 1, '+00:00').utc
 
 puts "~ Scheduler waiting until #{next_digest_time} (#{next_digest_time - n} sec)."
 sleep next_digest_time - n
