@@ -12,7 +12,7 @@ namespace :docker do
 
   desc "Run the container."
   task :run do
-    sh "docker run -d -p 80:80 -v #{Dir.pwd}:#{PATH}:ro #{NAME}"
+    sh "docker run -v #{Dir.pwd}:#{PATH}:ro -v #{Dir.pwd}/tmp:/data #{NAME}"
   end
 
   desc "SSH into a running container."
