@@ -8,7 +8,14 @@ require 'yaml'
 require 'pry'
 
 # Has to be mount as a volume || use Redis.
-PROCESSED_URLS = Array.new #YAML::load_file()
+DATA_DIR = ARGV.shift
+CACHE_FILE = File.join(DATA_DIR, 'contract-hunt.yml')
+
+PROCESSED_URLS = begin
+  YAML.load_file(CACHE_FILE)
+rescue # Whether the file doesn't exist or any other problem.
+  Array.new
+end
 
 def run(searches)
   searches.reduce(Array.new) do |buffer, search|
@@ -18,6 +25,7 @@ def run(searches)
         item = search.item_class.new(element)
         unless PROCESSED_URLS.include?(item.url)
           buffer << item
+          PROCESSED_URLS << item.url
         end
       end
     end
@@ -31,6 +39,10 @@ remote = run(Search.remote)
 
 renderer = ERB.new(DATA.read)
 puts renderer.result(binding)
+
+File.open(CACHE_FILE, 'w') do |file|
+  file.puts(PROCESSED_URLS.to_yaml)
+end
 
 __END__
 <h3>London</h3>
