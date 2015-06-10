@@ -48,14 +48,14 @@ __END__
 <h3>London</h3>
 <ul>
   <% london.each do |item| %>
-    <li>[<%= item.class %>] <a href="<%= item.url %>"><%= item.title %></a></li>
+    <li><%= item.to_html %></li>
   <% end %>
 </ul>
 
 <h3>Remote</h3>
 <ul>
   <% remote.each do |item| %>
-    <li>[<%= item.class %>] <a href="<%= item.url %>"><%= item.title %></a></li>
+    <li><%= item.to_html %></li>
   <% end %>
 </ul>
 

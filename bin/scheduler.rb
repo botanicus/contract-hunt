@@ -28,7 +28,6 @@ def run(command)
 end
 
 n = Time.now.utc
-n.hour
 next_digest_time = Time.new(n.year, n.month, n.day, 6, 20, 0, '+00:00').utc
 next_digest_time += 24 * 60 * 60 if next_digest_time < n
 
