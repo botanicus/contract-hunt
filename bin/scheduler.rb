@@ -16,7 +16,7 @@ end
 
 n = Time.now.utc
 # next_digest_time = Time.new(n.year, n.month, n.day + 1, 6, 20, 0, 0)
-next_digest_time = Time.new(n.year, n.month, n.day + 1, 16, 40, 0, 1)
+next_digest_time = Time.new(n.year, n.month, n.day + 1, 16, 54, 0, 1)
 
 puts "~ Scheduler waiting until #{next_digest_time}."
 sleep next_digest_time - Time.now.utc
