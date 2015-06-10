@@ -16,6 +16,12 @@ class Item
   def initialize(element)
     @element = element
   end
+
+  def to_html
+    <<-HTML.strip
+      [#{self.class.name}] <a href="#{self.url}">#{self.title}</a>
+    HTML
+  end
 end
 
 require 'contract-hunt/providers/stackoverflow'
