@@ -8,7 +8,7 @@ require 'yaml'
 require 'pry'
 
 # Has to be mount as a volume || use Redis.
-PROCESSED_URLS = YAML::load_file()
+PROCESSED_URLS = Array.new #YAML::load_file()
 
 def run(searches)
   searches.reduce(Array.new) do |buffer, search|
