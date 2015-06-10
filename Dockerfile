@@ -12,4 +12,4 @@ VOLUME ["/data"]
 
 ADD . $ROOT
 
-CMD [$ROOT/bin/scheduler.rb]
+CMD $ROOT/bin/scheduler.rb
