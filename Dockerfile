@@ -17,4 +17,4 @@ VOLUME ["/data"]
 
 ADD . $ROOT
 
-CMD ["/usr/local/bin/bundle", "exec", "./bin/scheduler.rb", "/data"]
+CMD ["/usr/local/bin/bundle", "exec", "./bin/scheduler.rb", "/usr/local/bin/bundle exec ./bin/contract-hunt.rb /data | /usr/local/bin/bundle exec ./bin/sender.rb"]

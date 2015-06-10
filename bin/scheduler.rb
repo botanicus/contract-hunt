@@ -2,10 +2,14 @@
 
 # Docker can run only one process.
 
-def run
+unless ARGV.length == 1
+  abort "You have to provide the command to run as the first argument!"
+end
+
+command = ARGV.first
+
+def run(command)
   puts "~ [#{Time.now.utc.strftime('%Y/%m/%d %H:%M')}] Wakey, wakey!"
-  bin = File.expand_path('..', __FILE__)
-  command = "bundle exec #{bin}/contract-hunt.rb | bundle exec #{bin}/sender.rb"
   puts "$ #{command}"
   system command
 end
@@ -15,9 +19,9 @@ next_digest_time = Time.new(n.year, n.month, n.day + 1, 6, 20, 0, 0)
 
 puts "~ Scheduler waiting until #{next_digest_time}."
 sleep next_digest_time - Time.now.utc
-run
+run(command)
 
 loop do
   sleep 24 * 60 * 60
-  run
+  run(command)
 end
