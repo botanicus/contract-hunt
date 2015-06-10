@@ -35,6 +35,8 @@ next_digest_time += 24 * 60 * 60 if next_digest_time < n
 # next_digest_time = Time.new(n.year, n.month, n.day, n.hour, n.min, n.sec + 1, '+00:00').utc
 
 puts "~ Scheduler waiting until #{next_digest_time} (#{next_digest_time - n} sec)."
+STDOUT.flush # Otherwise you can forget to see the log message until the sleep has finished. LOL.
+
 sleep next_digest_time - n
 run(command)
 
