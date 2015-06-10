@@ -58,3 +58,7 @@ __END__
     <li><a href="<%= item.url %>"><%= item.title %></a></li>
   <% end %>
 </ul>
+
+<p>
+  <em>Don't forget to check out <a href="https://www.toptal.com/platform/developer/jobs">TopTal jobs</a>.</em>
+</p>
