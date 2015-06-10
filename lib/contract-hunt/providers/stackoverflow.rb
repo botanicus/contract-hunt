@@ -2,7 +2,7 @@ require 'ostruct'
 
 class StackOverflow < Item
   def title
-    @element.css('.job-link').inner_text.strip
+    @element.css('.job-link').attribute('title')
   end
 
   def url

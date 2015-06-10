@@ -2,7 +2,8 @@ require 'ostruct'
 
 class LRUG < Item
   def title
-    @element.css('a:first').inner_text.strip
+    # binding.pry
+    @element.css('a:first').inner_text.split("\n").last
   end
 
   def url
