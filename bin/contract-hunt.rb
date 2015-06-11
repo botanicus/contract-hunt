@@ -82,7 +82,6 @@ __END__
 <h3>Some more resources</h3>
 <ul>
   <li>https://weworkremotely.com/</li>
-  <li>https://jobs.github.com/positions?description=ruby&location=</li>
   <li>https://twitter.com/AngularHire</li>
   <li>https://twitter.com/rorjobs</li>
   <li>https://twitter.com/RailsJobsCom</li>
