@@ -61,6 +61,7 @@ File.open(CACHE_FILE, 'w') do |file|
 end
 
 __END__
+<h2>Ruby</h2>
 <h3>London</h3>
 <ul>
   <% london.each do |item| %>
@@ -79,12 +80,17 @@ __END__
   <em>Don't forget to check out <a href="https://www.toptal.com/platform/developer/jobs">TopTal jobs</a>.</em>
 </p>
 
+<h2>JavaScript &amp; Angular.js</h2>
+<em>Not done yet. Check out these:</em>
+<ul>
+  <li>https://twitter.com/AngularHire</li>
+  <li>https://www.angularjobs.com/</li>
+  <li>https://twitter.com/search?q=ruby%20contract%20OR%20freelance%20OR%20angular%20OR%20angular.js%20OR%20angularjs%20OR%20nodejs%20OR%20node.js%20OR%20RoR&src=typd</li>
+</ul>
+
 <h3>Some more resources</h3>
 <ul>
   <li>https://weworkremotely.com/</li>
-  <li>https://twitter.com/AngularHire</li>
-  <li>https://twitter.com/rorjobs</li>
-  <li>https://twitter.com/RailsJobsCom</li>
   <li>http://job-empleo.com/index.php/cod.search/what.ruby/vertical.jobs/d.job-empleo.com/lang.en_UK/where.Greater%20London/job_type.contract</li>
   <li>http://www.jobsite.co.uk/cgi-bin/advsearch?search_type=quick&engine=db&search_referer=internal&fp_skill_include=ruby&location_include=&location_within=20</li>
   <li>http://searchskyjobs.com/england/osterley-jobs</li>
@@ -95,7 +101,6 @@ __END__
   <li>Pepa doporucuje https://angel.co/jobs#find/f!%7B%22types%22%3A%5B%22contract%22%5D%7D</li>
   <li>BTW https://www.odesk.com/o/profiles/users/_~01dafe2d81f69a7987/</li>
   <li>http://hnhiring.me/</li>
-  <li>https://twitter.com/search?q=ruby%20contract%20OR%20freelance%20OR%20angular%20OR%20angular.js%20OR%20angularjs%20OR%20nodejs%20OR%20node.js%20OR%20RoR&src=typd</li>
   <li>http://careers.stackoverflow.com/jobs?searchTerm=ruby&allowsremote=True&sort=p</li>
   <li>http://jobmote.com/tag/ruby</li>
   <li>http://3-beards.com/jobs/type/contractor</li>
@@ -103,7 +108,6 @@ __END__
   <li>http://www.theitjobboard.co.uk/index.php?Mode=AdvertSearch&lang=en&SearchTerms=Ruby&LocationSearchTerms=United+Kingdom&JobTypeFilter=1&</li>
   <li>https://www.linkedin.com/vsearch/j?keywords=ruby%20contract%20freelance&title=ruby&openAdvancedForm=true&locationType=I&countryCode=gb&sortBy=R&rsid=2391866571394535117613&orig=MDYS</li>
   <li>http://railyo.com/jobs</li>
-  <li>https://www.angularjobs.com/</li>
   <li>LinkedIn Groups</li>
   <li>https://www.google.co.uk/search?q=where+to+find+remote+ruby+contracts#q=ruby+remote+contract&tbs=qdr:w</li>
   <li>http://www.cybercoders.com/search/?filtertype=contract&searchterms=ruby%20remote&searchlocation=&newsearch=true&sorttype=date</li>
@@ -132,7 +136,6 @@ __END__
   <li>http://www.rubygig.com/a/jbb/find-jobs?oc=1349&oc=773&jt=2&jt=4&jt=32</li>
   <li>http://jobs.trovit.co.uk/index.php/cod.search_jobs/what_d.ruby/where_d./telecommute.1/</li>
   <li>http://jobs.nodejs.org/a/jobs/find-jobs/sb-pd</li>
-  <li>https://twitter.com/mirrorplacement</li>
   <li>https://news.ycombinator.com/item?id=5637663</li>
 </ul>
 

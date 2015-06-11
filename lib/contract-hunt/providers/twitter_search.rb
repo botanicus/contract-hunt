@@ -27,11 +27,18 @@ Search.london << OpenStruct.new(
   item_class: TwitterSearch
 )
 
-Search.remote << OpenStruct.new(
-  selector: '.stream.search-stream .content',
-  url: "https://twitter.com/search?q=contract%20ruby%20javascript&src=typd",
-  item_class: TwitterSearch
-)
+[
+  'https://twitter.com/rorjobs', # Does these work or just the search?
+  'https://twitter.com/RailsJobsCom',
+  'https://twitter.com/mirrorplacement',
+  'https://twitter.com/search?q=contract%20ruby&src=typd'
+].each do |url|
+  Search.remote << OpenStruct.new(
+    selector: '.stream.search-stream .content',
+    url: url,
+    item_class: TwitterSearch
+  )
+end
 
 __END__
 <div class="content">
