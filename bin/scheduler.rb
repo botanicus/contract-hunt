@@ -27,12 +27,13 @@ def run(command)
   end
 end
 
+# Run immediately
+# Set RUN_IMMEDIATELY_ONCE and restart the service.
+run(command) if ENV['RUN_IMMEDIATELY_ONCE']
+
 n = Time.now.utc
 next_digest_time = Time.new(n.year, n.month, n.day, 6, 20, 0, '+00:00').utc
 next_digest_time += 24 * 60 * 60 if next_digest_time < n
-
-# Run immediately
-# next_digest_time = Time.new(n.year, n.month, n.day, n.hour, n.min, n.sec + 1, '+00:00').utc
 
 puts "~ Scheduler waiting until #{next_digest_time} (#{next_digest_time - n} sec)."
 STDOUT.flush # Otherwise you can forget to see the log message until the sleep has finished. LOL.
