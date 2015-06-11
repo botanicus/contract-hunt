@@ -19,18 +19,34 @@ end
 
 def run(searches)
   searches.reduce(Array.new) do |buffer, search|
-    open(search.url) do |stream|
-      document = Nokogiri::HTML(stream.read)
-      document.css(search.selector).each do |element|
-        item = search.item_class.new(element)
-        if item.valid? && ! PROCESSED_URLS.include?(item.url)
-          buffer << item
-          PROCESSED_URLS << item.url
+    begin
+      open(search.url) do |stream|
+        document = Nokogiri::HTML(stream.read)
+        document.css(search.selector).each do |element|
+          item = search.item_class.new(element)
+          begin
+            if item.valid? && ! PROCESSED_URLS.include?(item.url)
+              buffer << item
+              PROCESSED_URLS << item.url
+            end
+          rescue Exception => error
+            STDERR.puts("~ DEBUG #{item.class}")
+            raise error
+          end
         end
       end
-    end
 
-    buffer
+      buffer
+    rescue Exception => error
+      unless ENV['DBG']
+        STDERR.puts("! #{error.class}: #{error.message}")
+        STDERR.puts("  - " + error.backtrace.join("\n  - "))
+      else
+        raise error
+      end
+    ensure
+      buffer
+    end
   end
 end
 
