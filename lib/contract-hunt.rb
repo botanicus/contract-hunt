@@ -27,3 +27,4 @@ end
 require 'contract-hunt/providers/stackoverflow'
 require 'contract-hunt/providers/lrug'
 require 'contract-hunt/providers/twitter_search'
+require 'contract-hunt/providers/theitjobboard'
