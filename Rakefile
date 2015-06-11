@@ -6,7 +6,7 @@ task default: ['docker:build', :test]
 
 desc "Test if everything's OK."
 task :test do
-  sh "rm tmp/contract-hunt.yml 2> /dev/null"
+  File.unlink('tmp/contract-hunt.yml') if File.exist?('tmp/contract-hunt.yml')
   sh "docker run -v #{Dir.pwd}:/apps/#{NAME}:ro -v #{Dir.pwd}/tmp:/data -e 'DBG=true' #{NAME} bundle exec bin/contract-hunt.rb /data"
 end
 
