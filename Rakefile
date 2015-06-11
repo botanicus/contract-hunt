@@ -2,7 +2,13 @@ NAME = File.basename(Dir.pwd)
 PATH = "/apps/#{NAME}"
 
 desc "Build and run the container."
-task default: ['docker:build', 'docker:run']
+task default: ['docker:build', :test]
+
+desc "Test if everything's OK."
+task :test do
+  sh "rm tmp/contract-hunt.yml 2> /dev/null"
+  sh "docker run -v #{Dir.pwd}:/apps/#{NAME}:ro -v #{Dir.pwd}/tmp:/data -e 'DBG=true' #{NAME} bundle exec bin/contract-hunt.rb /data"
+end
 
 namespace :docker do
   desc "Build the image."
