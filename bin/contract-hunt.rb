@@ -23,7 +23,7 @@ def run(searches)
       document = Nokogiri::HTML(stream.read)
       document.css(search.selector).each do |element|
         item = search.item_class.new(element)
-        unless PROCESSED_URLS.include?(item.url)
+        if item.valid? && ! PROCESSED_URLS.include?(item.url)
           buffer << item
           PROCESSED_URLS << item.url
         end
@@ -124,6 +124,7 @@ __END__
 <h3>Some more ideas</h3>
 <ul>
   <li>Would Elance / ODesk work? This bloke is good https://www.elance.com/s/barandisolutions/10183/ coaching?</li>
+  <li>More AngularJS. What else is trending? Scala, Go? Swift?</li>
   <li>https://clarity.fm - https://clarity.fm/browse/skills-management/productivity + ruby ... example: https://clarity.fm/twentytwenty/expertise/neurlolinguistic-programming-fear-elimination</li>
   <li>Review meetups.</li>
   <li>Brainstorm other ways how to make money. Courses? Online courses? https://www.udemy.com/teach/ Moving towards start-up technical advising? HackHands?</li>
@@ -140,3 +141,5 @@ __END__
   <li>Review Streak pipeline.</li>
   <li>Might be useful reading: http://mirrorplacement.com/blog</li>
 </ul>
+
+I’ve had a number of super high end Rubyists consider straight forward plug-into-an-existing Ruby team-senior-Development style roles when in a better climate they would usually they take more holistic consultant style contracts at more money. The knock on from this is that the people who would normally take on the straightforward senior development role now have more competition.

@@ -17,6 +17,10 @@ class Item
     @element = element
   end
 
+  def valid?
+    self.to_html.match(/ruby|rails|javascript|angular/i)
+  end
+
   def to_html
     <<-HTML.strip
       [#{self.class.name}] <a href="#{self.url}">#{self.title}</a>
