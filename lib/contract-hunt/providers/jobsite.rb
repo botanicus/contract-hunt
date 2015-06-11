@@ -6,7 +6,7 @@ class JobSite < Item
   end
 
   def url
-    relative_url = @element.css('h3:first a').attribute('href')
+    relative_url = @element.css('h3:first a').attribute('href').text.strip
     "http://www.jobsite.co.uk#{relative_url}"
   end
 
