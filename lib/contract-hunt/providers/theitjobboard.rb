@@ -6,7 +6,7 @@ class TheITJobBoard < Item
   end
 
   def url
-    relative_url = @element.css('a[itemprop=url]').attribute('href')
+    @element.css('a[itemprop=url]').attribute('href').text
   end
 end
 
