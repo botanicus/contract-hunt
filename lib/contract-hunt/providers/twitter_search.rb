@@ -8,6 +8,7 @@ class TwitterSearch < Item
   def tweet
     @element.css('.tweet-text').inner_text.strip
   end
+  alias_method :title, :tweet # For #valid?
 
   def url
     relative_url = @element.css('.stream-item-header .time a:first').attribute('href')
