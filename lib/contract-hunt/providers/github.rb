@@ -15,6 +15,7 @@ class GitHub < Item
   end
 end
 
+# https://jobs.github.com/positions?description=ruby+remote&location=
 Search.remote << OpenStruct.new(
   selector: '.positionlist tr',
   url: 'https://jobs.github.com/positions?description=ruby&location=Remote',

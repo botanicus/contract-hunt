@@ -10,6 +10,16 @@ class LRUG < Item
     leaf = @element.css('a:first').attribute('href')
     "http://lists.lrug.org/pipermail/chat-lrug.org/#{Time.now.year}-#{Time.now.strftime('%B')}/#{leaf}"
   end
+
+  def location
+    'london'
+  end
+
+  def rate
+  end
+
+  def timestamp
+  end
 end
 
 Search.london << OpenStruct.new(
