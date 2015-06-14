@@ -104,7 +104,7 @@ __END__
 
 <h3>Some more ideas</h3>
 <ul>
-  <li>Would Elance / ODesk work? <a href="https://www.upwork.com/o/profiles/users/_~01dafe2d81f69a7987/">ODesk example</a>, <a href="https://www.elance.com/s/barandisolutions/10183/">Elance example</a>. Coaching?</li>
+  <li>Would Elance / ODesk work? <a href="https://www.upwork.com/o/profiles/users/_~01dafe2d81f69a7987/">ODesk example</a>, <a href="https://www.elance.com/s/barandisolutions/10183/">Elance example</a>. <a href="http://programmers.stackexchange.com/questions/100685/making-money-with-open-source-as-a-developer">Paid OSS work</a>? Coaching?</li>
   <li>More AngularJS. What else is trending? Scala, Go? Swift?</li>
   <li>https://clarity.fm - https://clarity.fm/browse/skills-management/productivity + ruby ... example: https://clarity.fm/twentytwenty/expertise/neurlolinguistic-programming-fear-elimination</li>
   <li>Review meetups.</li>
