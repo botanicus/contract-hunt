@@ -18,7 +18,7 @@ class Item
   end
 
   def valid?
-    self.to_html.match(/ruby|rails|javascript|angular/i) && ! self.title.match(/devop|java\b/i)
+    self.to_html.match(/ruby|rails|javascript|angular/i) && ! self.title.match(/devop|java\b|php/i)
   end
 
   def to_html
