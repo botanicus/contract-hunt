@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Contract Digest</title>
+  </head>
+
+  <body>
+    <form action="/users" method="POST">
+      <input type="email" name="user[email]" placeholder="your@email.com" required="required" />
+
+      <p>
+        <input id="contracts_checkbox" type="checkbox" name="user[types][]" value="contract" checked="checked" />
+        <label for="contracts_checkbox">Notify me about contracts.</label>
+      </p>
+
+      <p>
+        <input id="permanents_checkbox" type="checkbox" name="user[types][]" value="permanent" />
+        <label for="permanents_checkbox">Notify me also about permanent positions.</label>
+      </p>
+
+      <p>
+        <input id="parttimes_checkbox" type="checkbox" name="user[types][]" value="parttime" />
+        <label for="parttimes_checkbox">Notify me about part-time jobs.</label>
+      </p>
+
+      <button type="submit">Subscribe!</button>
+    </form>
+  </body>
+</html>

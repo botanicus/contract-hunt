@@ -1,0 +1,20 @@
+{
+  "app": {
+    "name": "contract-digest.com",
+    "domain": "http://contract-digest.com"
+  },
+  "servers": {
+    "tagadab": {
+      "ssh": "tagadab",
+      "repo": "/repos/contract-digest.com",
+      "root": "/webs/contract-digest.com",
+      "port": "3060",
+      "init": "/etc/init/contract-digest.com",
+      "chef": {
+        "run_file_path": "tagadab.json",
+        "chef_solo_dir": "/var/chef-solo",
+        "cookbooks_dir": "/var/chef-solo/cookbooks"
+      }
+    }
+  }
+}

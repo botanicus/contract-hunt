@@ -1,0 +1,4 @@
+RACK_ENV=development
+PORT=3060
+APP_NAME=contract-digest.com
+APP_DOMAIN=http://localhost:3060
